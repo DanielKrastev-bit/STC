@@ -23,7 +23,14 @@ def parse():
     text = re.sub(r'/ Група 1', "", text)
     text = re.sub(r"\([^)]*\)", "", text)
     text = re.sub(r"Последна.*", "", text)
-
+    text = re.sub(r"УП - Специализирана", "УП_Практика", text).strip()
+    text = re.sub(r"Приложен софтуер", "ПС", text).strip()
+    text = re.sub(r"Промишлена електроника", "ПЕ", text).strip()
+    text = re.sub(r"Микропроцесорна техника", "МТ", text).strip()
+    text = re.sub(r"Компютърни системи", "КС", text).strip()
+    text = re.sub(r"УП - По специални измервания", "УП_Измервания", text).strip()
+    text = re.sub(r"Спортни дейности", "ФВС", text).strip()
+    text = re.sub(r"Съвременни тенденции в промишлен", "СТП", text).strip()
 
     for i in range(10):
         text = re.sub(r"  ", " ", text).strip()

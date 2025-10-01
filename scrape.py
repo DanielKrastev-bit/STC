@@ -3,12 +3,12 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import os
 
-def scrape(url):
+def scrape(url, week):
     url = url+"/ajax/diary/getScheduleForClass"
     params = {
         "pupil_id": "2500074621",
         "year": "25",
-        "week": "41",
+        "week": f"{week}",
         "class_year_id": "2500004725"
     }
     cookies = {

@@ -1,11 +1,8 @@
-# venv
 .venv/
 __pycache__/
-*.pyc
-
-# dotenv
 .env
 
-temp.py
 *.html
 *.txt
+*temp*
+*.sqlite
