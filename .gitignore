@@ -5,3 +5,7 @@ __pycache__/
 
 # dotenv
 .env
+
+temp.py
+*.html
+*.txt
